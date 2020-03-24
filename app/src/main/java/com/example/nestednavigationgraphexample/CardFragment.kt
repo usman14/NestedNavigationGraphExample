@@ -12,6 +12,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.card_fragment.*
 
+//asdf
 /**
  * A simple [Fragment] subclass.
  * Use the [CardFragment.newInstance] factory method to
