@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/B_nav_graph"
+    app:startDestination="@id/B1_fragment">
+    <fragment
+        android:id="@+id/B1_fragment"
+        android:name="com.example.nestednavigationgraphexample.Fragment_B1"
+        android:label="B1"
+        tools:layout="@layout/fragment_b1">
+        <action
+            android:id="@+id/B1_to_B2_fragment"
+            app:destination="@id/B2_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/B2_fragment"
+        android:name="com.example.nestednavigationgraphexample.Fragment_B2"
+        android:label="B2"
+        tools:layout="@layout/fragment_b2">
+        <action
+            android:id="@+id/B2_to_A1"
+            app:destination="@id/A_nav_graph"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/A_nav_graph"/>
+    </fragment>
+</navigation>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/A_nav_graph"
+    app:startDestination="@id/A1_fragment">
+    <include app:graph="@navigation/b_nav_graph" />
+    <include app:graph="@navigation/c_nav_graph" />
+    <include app:graph="@navigation/tab_navigation" />
+    <fragment
+        android:id="@+id/A1_fragment"
+        android:name="com.example.nestednavigationgraphexample.Fragment_A1"
+        android:label="A1"
+        tools:layout="@layout/fragment_a1">
+        <action
+            android:id="@+id/A1_to_B_nav_graph"
+            app:destination="@id/B_nav_graph" />
+        <action
+            android:id="@+id/A1_to_C_nav_graph"
+            app:destination="@id/C_nav_graph" />
+        <action
+            android:id="@+id/A1_to_A2"
+            app:destination="@id/A2_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/A2_fragment"
+        android:name="com.example.nestednavigationgraphexample.Fragment_A2"
+        android:label="A2"
+        tools:layout="@layout/fragment_a1"/>
+
+</navigation>
